@@ -1,5 +1,4 @@
 import customtkinter as ctk
-import pandas as pd
 import requests
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
