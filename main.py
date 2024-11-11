@@ -60,7 +60,11 @@ def BMR(age, height, weight, gender):
 # Frontend Class
 class NutritionApp(ctk.CTk):
     def __init__(self):
-        super().__init__()
+        super().__init__() 
+
+        # Show Instructions Popup on Start
+        self.show_instructions()
+
         ctk.set_appearance_mode("dark")  # Set dark mode theme
         ctk.set_default_color_theme("dark-blue")
 
@@ -113,14 +117,13 @@ class NutritionApp(ctk.CTk):
         self.chart_frame.pack(side="right", fill="both", expand=True, padx=10, pady=10)
 
         # Make the output text box resizable
-        self.result_text.bind("<Configure>", lambda event: self.result_text.configure(width=event.width, height=event.height))
+        # self.result_text.bind("<Configure>", lambda event: self.result_text.configure(width=event.width, height=event.height))
 
 
         # Bind Enter Key for Navigation
         self.bind_navigation()
 
-        # Show Instructions Popup on Start
-        self.show_instructions()
+        
 
     def create_labeled_entry(self, label_text, frame, row):
         label = ctk.CTkLabel(frame, text=label_text, font=("Arial", 14), anchor="w")  # Left-align the label text
